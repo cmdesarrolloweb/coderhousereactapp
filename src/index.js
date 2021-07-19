@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//CommonJS
+//const React = require('react');
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//ES6
+//import React from "react"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//1) Tener REACT en scope
+import React from "react"
+//2) Tener REACT_DOM en scope
+import ReactDOM from "react-dom"
+
+import App from "./App"
+// //3)Crear un componente
+// const App = () => "Hola Mundo"
+//4) Renderizar la aplicación una única vez
+ReactDOM.render(<App/>, document.getElementById('app'))
