@@ -4,8 +4,8 @@ import Col from 'react-bootstrap/Col'
 
 const ItemListContainer = ({greeting}) =>
 
-    <Container>
-        <Row className="mt-5">
+    <Container className="mt-5">
+        <Row>
             <Col xs={3}>{greeting}</Col>
             <Col xs={3}>{greeting}</Col>
             <Col xs={3}>{greeting}</Col>
