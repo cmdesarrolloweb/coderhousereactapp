@@ -1,16 +1,10 @@
-//CommonJS
-//const React = require('react');
-
-//ES6
-//import React from "react"
-
-//1) Tener REACT en scope
 import React from "react"
-//2) Tener REACT_DOM en scope
 import ReactDOM from "react-dom"
-
+import './index.css';
 import App from "./App"
-// //3)Crear un componente
-// const App = () => "Hola Mundo"
-//4) Renderizar la aplicación una única vez
+
+//Importin bootstrap css and js
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle'
+
 ReactDOM.render(<App/>, document.getElementById('app'))
