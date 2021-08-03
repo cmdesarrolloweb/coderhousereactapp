@@ -1,5 +1,6 @@
 import Header from "./components/Header/index"
 import ItemListContainer from "./components/ItemListContainer"
+import { Products } from './data/Products'
 import "./App.scss"
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
         return(
         <>
                 <Header/>
-                <ItemListContainer greeting="Prop greeting"/>
+                <ItemListContainer products={Products}/>
         </>  
         )
 }
