@@ -1,5 +1,6 @@
 import Header from "./components/Header/index"
 import ItemListContainer from "./components/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 import { Products } from './data/Products'
 import "./App.scss"
 
@@ -9,6 +10,7 @@ const App = () => {
         <>
                 <Header/>
                 <ItemListContainer products={Products}/>
+                <ItemDetailContainer products={Products}/>
         </>  
         )
 }
