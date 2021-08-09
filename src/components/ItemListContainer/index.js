@@ -1,16 +1,32 @@
+import { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Products } from '../../data/Products'
+import ItemList from './ItemList'
 
-const ItemListContainer = ({greeting}) =>
+const ItemListContainer = () => {
 
-    <Container className="mt-5">
-        <Row>
-            <Col xs={3}>{greeting}</Col>
-            <Col xs={3}>{greeting}</Col>
-            <Col xs={3}>{greeting}</Col>
-            <Col xs={3}>{greeting}</Col>
-        </Row>
-    </Container>
+    const [products, setProducts] = useState()
+
+    const getItems = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(Products)
+        }, 2000)
+    })
+
+    getItems.then(fetchedProducts => {
+        setProducts(fetchedProducts)
+    })
+
+    return(
+        <Container className="mt-5">
+            <Row>
+                <ItemList items={products}/>
+            </Row>
+        </Container>
+    )
+
+}
+
 
 export default ItemListContainer
