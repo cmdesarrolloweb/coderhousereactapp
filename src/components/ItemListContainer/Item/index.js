@@ -11,8 +11,8 @@ const Item = ({product}) => {
     const setProductCount = (contador) => setProductsCart(productsCart + contador)
 
     return (
-        <Col xs={4}>
-            <Card key={product.id} style={{ width: '18rem' }}>
+        <Col lg={4}>
+            <Card key={product.id}>
                 <Card.Img variant="top" src={product.imageUrl} />
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>

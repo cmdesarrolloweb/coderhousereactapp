@@ -5,8 +5,7 @@ import Card from 'react-bootstrap/Card'
 
 const ItemDetail = ({ item }) => {
     return (
-        <>
-            <CardColumns>
+    <CardColumns>
                 <Card>
                     <Card.Body>
                         <Card.Title><h1>{item.title}</h1>
@@ -21,7 +20,6 @@ const ItemDetail = ({ item }) => {
                     </Card.Body>
                 </Card>
             </CardColumns>
-        </>
     )
 }
 

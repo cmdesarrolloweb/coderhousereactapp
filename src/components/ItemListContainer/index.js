@@ -8,9 +8,9 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState()
 
-    const getItems = new Promise((resolve, reject) => {
+    const getItems = new Promise((res, rej) => {
         setTimeout(() => {
-            resolve(Products)
+            res(Products)
         }, 2000)
     })
 
