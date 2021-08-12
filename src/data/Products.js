@@ -6,7 +6,7 @@ export const Products = [
         price: 1000,
         imageUrl: "../images/products/soporte-para-notebook-portatil.jpg",
         stock: 3,
-        category: "1",
+        category: "cat1",
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const Products = [
         price: 750,
         imageUrl: "../images/products/soporte-de-madera-para-telefono-celular.jpg",
         stock: 5,
-        category: "2",
+        category: "cat2",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const Products = [
         price: 1000,
         imageUrl: "../images/products/soporte-para-notebook-portatil.jpg",
         stock: 3,
-        category: "3",
+        category: "cat3",
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const Products = [
         price: 750,
         imageUrl: "../images/products/soporte-de-madera-para-telefono-celular.jpg",
         stock: 5,
-        category: "1",
+        category: "cat1",
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export const Products = [
         price: 1000,
         imageUrl: "../images/products/soporte-para-notebook-portatil.jpg",
         stock: 3,
-        category: "2",
+        category: "cat2",
     },
     {
         id: 6,
@@ -51,6 +51,6 @@ export const Products = [
         price: 750,
         imageUrl: "../images/products/soporte-de-madera-para-telefono-celular.jpg",
         stock: 5,
-        category: "3",
+        category: "cat3",
     },
 ]

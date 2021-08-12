@@ -13,19 +13,19 @@ const ItemListContainer = () => {
     const params = useParams()
 
     useEffect(() => {
-    const getItems = new Promise((res, rej) => {
-        setTimeout(() => {
-            if(params.category) {
-                res(Products.filter(producto => producto.category === params.category))
-            }else{
-                res(Products)
-            }
-        }, 2000)
-        setEstado("pendiente")
-    })
-    getItems.then((fetchedProducts) => 
-        setProducts(fetchedProducts))
-        .then(() => setEstado("terminado"))
+        const getItems = new Promise((res, rej) => {
+            setTimeout(() => {
+                if(params.category) {
+                    res(Products.filter(producto => producto.category === params.category))
+                }else{
+                    res(Products)
+                }
+            }, 2000)
+            setEstado("pendiente")
+        })
+        getItems.then((fetchedProducts) => 
+            setProducts(fetchedProducts))
+            .then(() => setEstado("terminado"))
     }, [params.category])
 
     if (estado === "pendiente") {

@@ -8,6 +8,7 @@ import ItemCount from '../../ItemListContainer/ItemCount'
 const ItemDetail = ({item}) => {
     const [productsCart, setProductsCart] = useState(0)
     const setProductCount = (contador) => setProductsCart(productsCart + contador)
+    console.log(item)
 
     return (
         <>

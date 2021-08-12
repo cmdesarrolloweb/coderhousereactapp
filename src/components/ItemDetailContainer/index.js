@@ -8,15 +8,18 @@ import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
-    const [producto, setProducto] = useState([])
+    const [products, setProducts] = useState([])
     const [estado, setEstado] = useState("pendiente");
     const params = useParams()
+
+    console.log(params)
+    console.log(typeof params.id)
     
     useEffect(() => {
         const getItem = new Promise((res, rej) => {
             setTimeout(() => {
                 if(params.id) {
-                    res(Products.find(producto => producto.id === params.id))
+                    res(Products.find(producto => producto.id.toString() === params.id))
                 }else{
                     res(console.log("No se encontro producto buscado"))
                 }
@@ -24,7 +27,7 @@ const ItemDetailContainer = () => {
             setEstado("pendiente")
         })
         getItem.then((data_product) =>
-            setProducto(data_product))
+            setProducts(data_product))
             .then(() => setEstado("terminado"))
     }, [params.id])
 
@@ -43,7 +46,7 @@ const ItemDetailContainer = () => {
             <Container className="mt-5">
                 <Row>
                     <h5>Item Detail</h5>
-                    <ItemDetail item={producto} />
+                    <ItemDetail item={products} />
                 </Row>
             </Container>
         )

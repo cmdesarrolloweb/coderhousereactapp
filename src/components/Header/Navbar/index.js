@@ -19,9 +19,9 @@ const NavBar = () =>
                 <Navbar.Toggle className="text-dark" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link className="nav-link" to="/categoria/1">Categoría 1</Link>
-                        <Link className="nav-link" to="/categoria/2">Categoría 2</Link>
-                        <Link className="nav-link" to="/categoria/3">Categoría 3</Link>
+                        <Link className="nav-link" to="/categoria/cat1">Categoría 1</Link>
+                        <Link className="nav-link" to="/categoria/cat2">Categoría 2</Link>
+                        <Link className="nav-link" to="/categoria/cat3">Categoría 3</Link>
                         <Link className="nav-link" to="/">Catálogo</Link>
                         <Link className="nav-link" to="/">Cómo Comprar?</Link>
                         <Link className="nav-link" to="/">Contacto</Link>
