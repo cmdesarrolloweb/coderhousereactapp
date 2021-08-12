@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 import ItemDetail from "./ItemDetail"
 
 const ItemDetailContainer = () => {
 
     const [producto, setProducto] = useState([])
+    
     useEffect(() => {
         const getItem = new Promise((res, rej) => {
             setTimeout(() => {
@@ -23,9 +26,12 @@ const ItemDetailContainer = () => {
     console.log(producto)
 
     return (
-        <div>
-            <ItemDetail item={producto} />
-        </div>
+        <Container className="mt-5">
+            <Row>
+                <h5>Item Detail</h5>
+                <ItemDetail item={producto} />
+            </Row>
+        </Container>
     )
 }
 

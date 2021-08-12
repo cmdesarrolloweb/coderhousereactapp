@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import { Products } from '../../data/Products'
 import ItemList from './ItemList'
 
-const ItemListContainer = () => {
+const ItemListContainer = (match) => {
 
     const [products, setProducts] = useState()
 

@@ -18,7 +18,11 @@ const Item = ({product}) => {
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>
                     $ {priceFormat.format(product.price)}
-                    <ItemCount stock={product.stock} initial={1} onAdd={setProductCount} />
+                    {/* <ItemCount stock={product.stock} initial={1} onAdd={setProductCount} /> */}
+                    </Card.Text>
+                    <Card.Text>
+                    {product.category}
+                    {/* <ItemCount stock={product.stock} initial={1} onAdd={setProductCount} /> */}
                     </Card.Text>
                 </Card.Body>
             </Card>
