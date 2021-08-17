@@ -12,15 +12,9 @@ const App = () => {
                         <Header/>
 
                         <Switch>
-                                <Route path={["/", "/categoria/:category"]} exact>
-                                        <ItemListContainer/>
-                                </Route>
-                                <Route path="/producto/:id" exact>
-                                        <ItemDetailContainer/>
-                                </Route>
-                                <Route path="/cart">
-                                        <Cart></Cart>
-                                </Route>
+                                <Route path={["/", "/categoria/:category"]} component={ItemListContainer} exact />
+                                <Route path="/producto/:id" component={ItemDetailContainer} exact />
+                                <Route path="/cart" component={Cart} exact />
                         </Switch>
                 </BrowserRouter>
 

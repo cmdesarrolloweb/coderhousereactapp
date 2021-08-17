@@ -1,28 +1,29 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
 
 const ItemCount = ({ stock , initial , onAdd }) => {
 
     const [contador,setContador] = useState(initial)
 
+    // Si el contador es menor que el stock, se incrementa en 1
     const aumentarContador = () => {
         if(contador < stock) {
             setContador(contador +1)
         }
     }
 
+    // Si el contador es mayor que 1, se decrementa 1
     const restarContador = () => {
         if(contador > 1) {
             setContador(contador - 1)
         }
     }
 
-    const confirmar = () => {
-        if (stock > 0) {
-            onAdd(contador)
-        }
-    }
+    // const confirmar = () => {
+    //     if (stock > 0) {
+    //         onAdd(contador)
+    //     }
+    // }
 
     return (
 
@@ -37,7 +38,11 @@ const ItemCount = ({ stock , initial , onAdd }) => {
                 </button>
             </div>
             <p className="text-xs opacity-50 mb-2">Stock: {stock}</p>
-            <Link to="/cart" onClick={confirmar}>Terminar Compra</Link>
+            { (stock > 0) ? 
+                <button className="detail" onClick={ () => onAdd(contador)} >Agregar al carrito</button> :
+                <Alert variant="warning">Producto sin stock</Alert>
+            }
+            {/* <Link to="/cart" onClick={confirmar}>Terminar Compra</Link> */}
             {/* <button className="btn-primary active:bg-green-500 rounded px-2" onClick={confirmar} type="button">Agregar al carrito</button> */}
         </div>
     )

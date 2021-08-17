@@ -5,7 +5,7 @@ export const Products = [
         description: "Mesa para computadora portátil, escritorio portátil, accesorio para computadora portátil, escritorio de madera",
         price: 1000,
         imageUrl: "../images/products/soporte-para-notebook-portatil.jpg",
-        stock: 3,
+        stock: 0,
         category: "cat1",
     },
     {
