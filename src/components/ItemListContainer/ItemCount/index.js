@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 
 const ItemCount = ({ stock , initial , onAdd }) => {
 
@@ -35,7 +37,8 @@ const ItemCount = ({ stock , initial , onAdd }) => {
                 </button>
             </div>
             <p className="text-xs opacity-50 mb-2">Stock: {stock}</p>
-            <button className="btn-primary active:bg-green-500 rounded px-2" onClick={confirmar} type="button">Agregar al carrito</button>
+            <Link to="/cart" onClick={confirmar}>Terminar Compra</Link>
+            {/* <button className="btn-primary active:bg-green-500 rounded px-2" onClick={confirmar} type="button">Agregar al carrito</button> */}
         </div>
     )
 }

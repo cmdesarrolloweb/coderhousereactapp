@@ -3,6 +3,7 @@ import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import "./App.scss"
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Cart from './components/Cart'
 
 const App = () => {
         
@@ -17,9 +18,9 @@ const App = () => {
                                 <Route path="/producto/:id" exact>
                                         <ItemDetailContainer/>
                                 </Route>
-                                {/* <Route path="/" component={ItemListContainer} exact/>
-                                <Route path="/categoria/:category" component={ItemListContainer}/> */}
-                                {/* <Route path="/categoria/:category_id" component={ItemDetailContainer}/> */}
+                                <Route path="/cart">
+                                        <Cart></Cart>
+                                </Route>
                         </Switch>
                 </BrowserRouter>
 

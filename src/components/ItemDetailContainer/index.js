@@ -34,18 +34,20 @@ const ItemDetailContainer = () => {
     if (estado === "pendiente") {
         return(
 
-        <div>
-            <h3>Detalle de Producto:</h3>
-            <Spinner animation="border" role="status" className="d-block m-auto" >
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>
-        </div>
+            <Container className="mt-5">
+                <Row>
+                    <h4>Detalle de Producto:</h4>
+                    <Spinner animation="border" role="status" className="d-block m-auto" >
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                </Row>
+            </Container>
         )
     } else {
         return (
             <Container className="mt-5">
                 <Row>
-                    <h5>Item Detail</h5>
+                    <h4>Detalle de Producto:</h4>
                     <ItemDetail item={products} />
                 </Row>
             </Container>
