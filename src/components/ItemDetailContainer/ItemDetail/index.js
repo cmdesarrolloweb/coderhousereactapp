@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { contexto } from "../../Context/CartContext"
 import CardColumns from 'react-bootstrap/CardColumns'
 import Card from 'react-bootstrap/Card'
 import ItemCount from '../../ItemListContainer/ItemCount'
 import { Link } from "react-router-dom";
 
 
+
 const ItemDetail = ({item}) => {
+
+    const {addItem} = useContext(contexto)
 
     let initial;
     if (item.stock === 0){
@@ -21,7 +25,18 @@ const ItemDetail = ({item}) => {
 
     // la funcion onAdd que viene del ItemCount cambia el estado  de "terminarCompra" para crear el boton de finalizar y asi ir a /carrito
     const onAdd = (quantityToAdd) => {
-            setTerminarCompra(<Link to={`/cart`} className="btn btn-success">Terminar la compra de {quantityToAdd} {item.name}</Link>);
+        console.log("State Uplifting")
+        console.log("Recibi la cantidad de un componente hijo")
+        console.log(quantityToAdd)
+
+        const item_para_agregar = {
+            item : item ,
+            quantity : quantityToAdd
+        }
+
+        addItem(item_para_agregar)
+
+        setTerminarCompra(<Link to={`/cart`} className="btn btn-success">Terminar la compra de {quantityToAdd} {item.name}</Link>);
     }
 
         return (
@@ -38,7 +53,7 @@ const ItemDetail = ({item}) => {
                                 {item.description}
                             </Card.Text>
                             <Card.Text>
-                                <ItemCount stock={item.stock} initial={initial} onAdd={onAdd} />
+                                <ItemCount stock={item.stock} initial={item.stock >= 1 ? 1 : 0} onAdd={onAdd} />
                                 <div className="text-center">{terminarCompra}</div>
                             </Card.Text>
                             <h5>$ {item.price}</h5>

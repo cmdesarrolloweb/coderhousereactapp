@@ -7,8 +7,9 @@ import LogoWidget from '../LogoWidget'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 
-const NavBar = () => 
-        
+const NavBar = () => {
+    
+    return (
         <Navbar expand="lg" bg="secondary" variant="dark">
             <Container fluid="xxl">
                 <Navbar.Brand className="logo">
@@ -27,9 +28,7 @@ const NavBar = () =>
                         <Link className="nav-link" to="/">Contacto</Link>
                     </Nav>
                     <Nav>
-                        <Link className="nav-link" eventKey={2}>
-                            <CartWidget />
-                        </Link>
+                        <CartWidget />
                     </Nav>
                     <Nav>
                         <Link className="nav-link">
@@ -39,5 +38,9 @@ const NavBar = () =>
                 </Navbar.Collapse>
                 </Container>
         </Navbar>
+    )
+
+}
+
 
 export default NavBar
