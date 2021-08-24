@@ -13,11 +13,12 @@ const Cart = () => {
                 <Row>
                     <h2>Carro de Compras</h2>
                     {carrito.map(item =>
-                        <div key={item.id}>
-                            {item.item.name} x {item.item.quantityAdd} - ${item.price * item.quantityAdd}
-                            <button onClick={()=>removeItem(item.id)}>borrar</button>
+                        <div key={item.id} id={item.item.id}>
+                            {item.item.name} x {item.quantity} - ${item.item.price * item.quantity}
+                            <button onClick={()=>removeItem(item.item.id)}>borrar</button>
                         </div>
                     )}
+                    <button onClick={()=>clear()}>borrar carrito</button>
                 </Row>
             </Container>
     )

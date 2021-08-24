@@ -19,9 +19,9 @@ const CustomProvider = ({children}) => {
     }
 
     const removeItem = (itemId) => {
-        const borrar = carrito.filter( (item) => item.id !== itemId);
-        setCarrito(borrar);
-        // console.log(itemId)
+        // const borrar = carrito.filter( (item) => item.id !== itemId);
+        // setCarrito(borrar);
+        console.log(itemId)
     }
 
     const clear = () => {
