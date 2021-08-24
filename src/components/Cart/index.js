@@ -15,7 +15,7 @@ const Cart = () => {
                     {carrito.map(item =>
                         <div key={item.id} id={item.item.id}>
                             {item.item.name} x {item.quantity} - ${item.item.price * item.quantity}
-                            <button onClick={()=>removeItem(item.item.id)}>borrar</button>
+                            <button onClick={()=>removeItem(item.id)}>borrar</button>
                         </div>
                     )}
                     <button onClick={()=>clear()}>borrar carrito</button>
