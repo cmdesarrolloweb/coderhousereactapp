@@ -19,19 +19,20 @@ const CustomProvider = ({children}) => {
     }
 
     const removeItem = (itemId) => {
-        // const borrar = carrito.filter( (item) => item.id !== itemId);
-        // setCarrito(borrar);
-        console.log(itemId)
+        setCarrito(carrito.filter( item => item.item.id !== itemId));
+        console.log(`Se eliminaron todos los productos con id: ${itemId}`)
     }
 
     const clear = () => {
-        console.log("Clear")
         setCarrito([]);
+        console.log(`Se borraron todos los productos`)
     }
 
-    const isInCart = (id) => {}
+    const isInCart = (i) => {
+        return carrito.find(item => item.id === i)
+    }
 
-    const contexto_para_consumir = {carrito, addItem, removeItem, clear}
+    const contexto_para_consumir = {carrito, setCarrito, addItem, removeItem, clear, isInCart}
 
     return (
         <Provider value={contexto_para_consumir}>
